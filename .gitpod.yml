@@ -1,0 +1,64 @@
+image:
+
+  file: .gitpod.Dockerfile
+
+
+
+
+# open up the port for VNC
+
+# ignore all other ports
+
+ports:
+
+  - port: 6080
+
+    onOpen: open-preview
+
+  - port: 1-6079
+
+    onOpen: ignore
+
+  - port: 6081-65534
+
+    onOpen: ignore
+
+
+
+
+# in 'init' we can have bash-code that is executed during the pre-build.
+
+# We also run 'mvn test' without actually running the tests to ensure all dependencies are fetched.
+
+# in 'command' we have bash-code that is executen in the Gitpod Terminal View when the user opens a workspace.
+
+tasks:
+
+  - init: |
+
+      mvn install -DskipTests=true
+
+      mvn test
+
+    command: |
+
+      gp open GitpodProjectmv/src/test/java/com/etg/test/gitpod/GitpodSeleniumCode.java
+
+vscode:
+
+  extensions:
+
+    - redhat.java
+
+    - redhat.vscode-xml
+
+    - vscjava.vscode-maven
+
+    - vscjava.vscode-java-debug
+
+    - vscjava.vscode-java-pack
+
+    - vscjava.vscode-java-dependency
+
+    - vscjava.vscode-java-test
+
