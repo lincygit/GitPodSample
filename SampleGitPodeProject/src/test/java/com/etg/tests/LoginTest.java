@@ -14,7 +14,7 @@ public class LoginTest {
 	  WebDriverManager.chromedriver().setup();
       ChromeOptions options=new ChromeOptions();
       options.setHeadless(true);
-      System.out.println("hello");
+      System.out.println("Testing");
       options.addArguments("window-size=1920,1200");
       driver=new ChromeDriver(options);
       driver.get("https://opensource-demo.orangehrmlive.com/");
