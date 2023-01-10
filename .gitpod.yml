@@ -42,7 +42,7 @@ tasks:
 
     command: |
 
-      gp open GitpodProjectmv/src/test/java/com/etg/test/gitpod/GitpodSeleniumCode.java
+      gp open SampleGitPodeProject/src/test/java/com/etg/tests/LoginTest.java
 
 vscode:
 
