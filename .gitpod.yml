@@ -42,7 +42,7 @@ tasks:
 
     command: |
 
-      gp open SampleGitPodeProject/src/test/java/com/etg/tests/LoginTest.java
+      #gp open SampleGitPodeProject/src/test/java/com/etg/tests/LoginTest.java
 
 vscode:
 
